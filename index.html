@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jumail Taj — Fullstack Developer & ML Enthusiast</title>
+
+  <!-- ✅ Google Fonts: Sora (headings) + DM Sans (body text) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- ✅ Font Awesome icons (for social links and skill icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- ✅ Our custom stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       🔝 NAVBAR — Sticky top navigation
+  ============================================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+
+      <!-- Logo / Brand name -->
+      <a href="#home" class="nav-logo">JT<span class="dot">.</span></a>
+
+      <!-- Navigation links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#what-i-do">Services</a></li>
+        <li><a href="#ml">ML</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- Hamburger button (visible only on mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </nav>
+
+
+  <!-- ============================================================
+       🦸 HERO SECTION — First thing visitors see
+  ============================================================ -->
+  <section class="hero" id="home">
+
+    <!-- Decorative background blobs (pure CSS, no images) -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <div class="hero-content fade-in">
+
+      <!-- Profile image placeholder (replace src with your real photo) -->
+      <div class="profile-img-wrapper">
+        <img
+          src="https://ui-avatars.com/api/?name=Jumail+Taj&size=200&background=0d9488&color=ffffff&font-size=0.40&rounded=true"
+          alt="Jumail Taj profile photo"
+          class="profile-img"
+        />
+        <!-- Green "online" dot indicator -->
+        <span class="online-dot"></span>
+      </div>
+
+      <!-- Greeting tag -->
+      <p class="hero-greeting">👋 Hello, I'm</p>
+
+      <!-- Main name heading -->
+      <h1 class="hero-name">Jumail Taj</h1>
+
+      <!-- Animated role text (changes via JS) -->
+      <p class="hero-role">
+        I'm a <span class="role-text" id="roleText">Fullstack Developer</span>
+      </p>
+
+      <!-- Short tagline -->
+      <p class="hero-tagline">
+        Building modern web apps & exploring the world of Machine Learning.
+      </p>
+
+      <!-- CTA buttons -->
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+      </div>
+
+      <!-- Language badges -->
+      <div class="lang-badges">
+        <span class="badge">🌐 English</span>
+        <span class="badge">🇮🇳 Hindi</span>
+        <span class="badge">🌴 Tamil</span>
+      </div>
+
+    </div>
+
+    <!-- Scroll down arrow hint -->
+    <a href="#about" class="scroll-hint">
+      <i class="fa-solid fa-chevron-down"></i>
+    </a>
+  </section>
+
+
+  <!-- ============================================================
+       👤 ABOUT ME SECTION
+  ============================================================ -->
+  <section class="section about" id="about">
+    <div class="container">
+
+      <h2 class="section-title">About <span class="accent">Me</span></h2>
+      <p class="section-sub">A little bit about who I am</p>
+
+      <div class="about-grid">
+
+        <!-- Left: text -->
+        <div class="about-text fade-in">
+          <p>
+            Hi! I'm <strong>Jumail Taj</strong>, a passionate Fullstack Developer and ML Enthusiast
+            based in <strong>Chennai, India 🇮🇳</strong>. I love building web applications that
+            are clean, fast, and actually useful.
+          </p>
+          <p>
+            I work with the full web stack — from designing beautiful UIs with React and
+            Tailwind CSS to building secure REST APIs with Node.js, Express, and databases
+            like MongoDB and SQL.
+          </p>
+          <p>
+            I'm also deeply interested in Machine Learning. I enjoy understanding how models
+            learn from data and building simple prediction tools using Python.
+            Always learning, always building. 🚀
+          </p>
+
+          <!-- Fun facts row -->
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-num">10+</span>
+              <span class="stat-label">Projects Built</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">5+</span>
+              <span class="stat-label">Tech Skills</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">3</span>
+              <span class="stat-label">Languages</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: image or decorative card -->
+        <div class="about-card fade-in">
+          <div class="about-card-inner">
+            <div class="about-icon"><i class="fa-solid fa-code"></i></div>
+            <h3>Fullstack Developer</h3>
+            <p>Building end-to-end web solutions from UI to database.</p>
+            <div class="about-icon" style="margin-top:1.5rem"><i class="fa-solid fa-brain"></i></div>
+            <h3>ML Enthusiast</h3>
+            <p>Learning to build intelligent systems with Python & data.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       🛠️ SKILLS SECTION — Grouped skill cards
+  ============================================================ -->
+  <section class="section skills" id="skills">
+    <div class="container">
+
+      <h2 class="section-title">My <span class="accent">Skills</span></h2>
+      <p class="section-sub">Technologies and tools I work with</p>
+
+      <!-- Skill group: Frontend -->
+      <div class="skill-group">
+        <h3 class="group-label"><i class="fa-solid fa-palette"></i> Frontend</h3>
+        <div class="skills-grid">
+          <div class="skill-card fade-in">
+            <i class="fa-brands fa-react skill-icon" style="color:#61dafb"></i>
+            <span>React</span>
+          </div>
+          <div class="skill-card fade-in">
+            <i class="fa-brands fa-css3-alt skill-icon" style="color:#38bdf8"></i>
+            <span>Tailwind CSS</span>
+          </div>
+          <div class="skill-card fade-in">
+            <i class="fa-brands fa-html5 skill-icon" style="color:#e34c26"></i>
+            <span>HTML</span>
+          </div>
+          <div class="skill-card fade-in">
+            <i class="fa-brands fa-js skill-icon" style="color:#f7df1e"></i>
+            <span>JavaScript</span>
+          </div>
+          <div class="skill-card fade-in">
+            <i class="fa-solid fa-pen-nib skill-icon" style="color:#a78bfa"></i>
+            <span>UI/UX Design</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skill group: Backend -->
+      <div class="skill-group">
+        <h3 class="group-label"><i class="fa-solid fa-server"></i> Backend</h3>
+        <div class="skills-grid">
+          <div class="skill-card fade-in">
+            <i class="fa-brands fa-node-js skill-icon" style="color:#68a063"></i>
+            <span>Node.js</span>
+          </div>
+          <div class="skill-card fade-in">
+            <i class="fa-solid fa-bolt skill-icon" style="color:#34d399"></i>
+            <span>Express.js</span>
+          </div>
+          <div class="skill-card fade-in">
+            <i class="fa-solid fa-key skill-icon" style="color:#fbbf24"></i>
+            <span>JWT Auth</span>
+          </div>
+          <div class="skill-card fade-in">
+            <i class="fa-brands fa-google skill-icon" style="color:#ea4335"></i>
+            <span>Google OAuth</span>
+          </div>
+          <div class="skill-card fade-in">
+            <i class="fa-solid fa-envelopes-bulk skill-icon" style="color:#60a5fa"></i>
+            <span>Mail Integration</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skill group: Database -->
+      <div class="skill-group">
+        <h3 class="group-label"><i class="fa-solid fa-database"></i> Database</h3>
+        <div class="skills-grid">
+          <div class="skill-card fade-in">
+            <i class="fa-solid fa-leaf skill-icon" style="color:#4db33d"></i>
+            <span>MongoDB</span>
+          </div>
+          <div class="skill-card fade-in">
+            <i class="fa-solid fa-table skill-icon" style="color:#38bdf8"></i>
+            <span>SQL</span>
+          </div>
+          <div class="skill-card fade-in">
+            <i class="fa-solid fa-fire skill-icon" style="color:#fb923c"></i>
+            <span>Firebase</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skill group: Other -->
+      <div class="skill-group">
+        <h3 class="group-label"><i class="fa-solid fa-wrench"></i> Other</h3>
+        <div class="skills-grid">
+          <div class="skill-card fade-in">
+            <i class="fa-brands fa-python skill-icon" style="color:#3b82f6"></i>
+            <span>Python</span>
+          </div>
+          <div class="skill-card fade-in">
+            <i class="fa-solid fa-plug skill-icon" style="color:#a3e635"></i>
+            <span>API Development</span>
+          </div>
+          <div class="skill-card fade-in">
+            <i class="fa-solid fa-credit-card skill-icon" style="color:#c084fc"></i>
+            <span>Razorpay</span>
+          </div>
+          <div class="skill-card fade-in">
+            <i class="fa-solid fa-magnifying-glass-chart skill-icon" style="color:#f472b6"></i>
+            <span>SEO Basics</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       📁 PROJECTS SECTION
+  ============================================================ -->
+  <section class="section projects" id="projects">
+    <div class="container">
+
+      <h2 class="section-title">My <span class="accent">Projects</span></h2>
+      <p class="section-sub">Things I've built with code</p>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card fade-in">
+          <div class="project-header">
+            <div class="project-icon"><i class="fa-solid fa-bag-shopping"></i></div>
+            <div class="project-links">
+              <a href="#" class="icon-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Inaya Store</h3>
+          <p class="project-desc">
+            A fully working e-commerce store for hair accessories.
+            Features include cart management, secure payments, admin panel,
+            and Google OAuth login.
+          </p>
+          <div class="tech-stack">
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">Razorpay</span>
+            <span class="tag">Cloudinary</span>
+          </div>
+          <a href="#" class="btn btn-sm">View on GitHub</a>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card fade-in">
+          <div class="project-header">
+            <div class="project-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <div class="project-links">
+              <a href="#" class="icon-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">MTPA Stock Analyzer</h3>
+          <p class="project-desc">
+            A Python-based Multi-Timeframe Price Action analyzer for Indian
+            stocks. Uses yfinance and pandas to analyze stock trends on NSE/BSE.
+          </p>
+          <div class="tech-stack">
+            <span class="tag">Python</span>
+            <span class="tag">yfinance</span>
+            <span class="tag">pandas</span>
+            <span class="tag">numpy</span>
+            <span class="tag">ta</span>
+          </div>
+          <a href="#" class="btn btn-sm">View on GitHub</a>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card fade-in">
+          <div class="project-header">
+            <div class="project-icon"><i class="fa-solid fa-user-tie"></i></div>
+            <div class="project-links">
+              <a href="#" class="icon-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Personal Portfolio</h3>
+          <p class="project-desc">
+            My personal portfolio website built with React, Vite, and Tailwind CSS.
+            Includes smooth scroll, lazy loading, React Router, and a
+            fully responsive layout.
+          </p>
+          <div class="tech-stack">
+            <span class="tag">React</span>
+            <span class="tag">Vite</span>
+            <span class="tag">Tailwind</span>
+            <span class="tag">React Router</span>
+          </div>
+          <a href="#" class="btn btn-sm">View on GitHub</a>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card fade-in">
+          <div class="project-header">
+            <div class="project-icon"><i class="fa-solid fa-robot"></i></div>
+            <div class="project-links">
+              <a href="#" class="icon-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Kite Trading Bot</h3>
+          <p class="project-desc">
+            A Python tool built on the Zerodha Kite API for placing and managing
+            stock orders programmatically with input validation and a
+            confirmation step.
+          </p>
+          <div class="tech-stack">
+            <span class="tag">Python</span>
+            <span class="tag">pykiteconnect</span>
+            <span class="tag">Zerodha API</span>
+          </div>
+          <a href="#" class="btn btn-sm">View on GitHub</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       💼 WHAT I DO SECTION — Services
+  ============================================================ -->
+  <section class="section what-i-do" id="what-i-do">
+    <div class="container">
+
+      <h2 class="section-title">What I <span class="accent">Do</span></h2>
+      <p class="section-sub">Services I can help you with</p>
+
+      <div class="services-grid">
+
+        <div class="service-card fade-in">
+          <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
+          <h3>Web Development</h3>
+          <p>Building responsive, fast, and modern websites using React, Node.js, and databases.</p>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="service-icon"><i class="fa-solid fa-plug-circle-bolt"></i></div>
+          <h3>API Development</h3>
+          <p>Designing and building clean REST APIs with Express.js, JWT auth, and Razorpay payments.</p>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+          <h3>UI/UX Design</h3>
+          <p>Creating clean, beautiful, and user-friendly interfaces that look and feel great.</p>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="service-icon"><i class="fa-solid fa-brain"></i></div>
+          <h3>ML Model Building</h3>
+          <p>Building basic machine learning models for prediction and data analysis using Python.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       🤖 ML SECTION — Machine Learning interest
+  ============================================================ -->
+  <section class="section ml-section" id="ml">
+    <div class="container">
+
+      <h2 class="section-title">Machine <span class="accent">Learning</span></h2>
+      <p class="section-sub">My journey into AI & data</p>
+
+      <div class="ml-grid">
+
+        <!-- Left: explanation -->
+        <div class="ml-text fade-in">
+          <p>
+            Beyond web development, I'm genuinely excited about <strong>Artificial Intelligence
+            and Machine Learning</strong>. I've started learning how machines can be trained
+            to recognize patterns, make predictions, and solve real-world problems.
+          </p>
+          <p>
+            Using <strong>Python</strong>, I explore datasets, build simple prediction models,
+            and understand how data drives intelligent decision-making.
+            It's one of the most fascinating fields in tech right now — and I'm just getting started! 🤖
+          </p>
+          <div class="ml-interests">
+            <div class="ml-tag"><i class="fa-solid fa-chart-bar"></i> Data Analysis</div>
+            <div class="ml-tag"><i class="fa-solid fa-circle-nodes"></i> Prediction Models</div>
+            <div class="ml-tag"><i class="fa-brands fa-python"></i> Python / scikit-learn</div>
+            <div class="ml-tag"><i class="fa-solid fa-microchip"></i> AI Applications</div>
+          </div>
+        </div>
+
+        <!-- Right: decorative info box -->
+        <div class="ml-card fade-in">
+          <div class="ml-card-header">
+            <i class="fa-solid fa-terminal"></i> ML Journey
+          </div>
+          <ul class="ml-list">
+            <li><span class="check">✅</span> Basics of ML algorithms</li>
+            <li><span class="check">✅</span> Python for data analysis</li>
+            <li><span class="check">✅</span> Simple classification models</li>
+            <li><span class="check">✅</span> Price action + data analysis</li>
+            <li><span class="in-progress">🔄</span> Deep Learning basics</li>
+            <li><span class="in-progress">🔄</span> Building ML-powered apps</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       📬 CONTACT SECTION
+  ============================================================ -->
+  <section class="section contact" id="contact">
+    <div class="container">
+
+      <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
+      <p class="section-sub">Have a project? Let's work together!</p>
+
+      <div class="contact-box fade-in">
+
+        <p class="contact-cta">
+          Whether you need a website built, an API developed, or just want to say hello —
+          I'd love to hear from you. Let's create something great together! 🙌
+        </p>
+
+        <!-- Social links -->
+        <div class="social-links">
+
+          <a href="#" class="social-btn" title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+            <span>Instagram</span>
+          </a>
+
+          <a href="#" class="social-btn linkedin" title="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+
+          <a href="#" class="social-btn facebook" title="Facebook">
+            <i class="fa-brands fa-facebook"></i>
+            <span>Facebook</span>
+          </a>
+
+          <a href="#" class="social-btn github" title="GitHub">
+            <i class="fa-brands fa-github"></i>
+            <span>GitHub</span>
+          </a>
+
+        </div>
+
+        <!-- Email CTA -->
+        <a href="mailto:jumailtaj@email.com" class="btn btn-primary" style="margin-top:2rem">
+          <i class="fa-solid fa-envelope"></i> &nbsp;Send Me a Message
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       🦶 FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-logo">JT<span class="dot">.</span></p>
+      <p class="footer-copy">
+        Designed & Built by <strong>Jumail Taj</strong> · Chennai, India 🇮🇳
+      </p>
+      <p class="footer-copy" style="font-size:0.8rem; opacity:0.4; margin-top:0.5rem">
+        © 2025 Jumail Taj. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- ============================================================
+       ⬆️ SCROLL TO TOP BUTTON (appears when you scroll down)
+  ============================================================ -->
+  <button class="scroll-top" id="scrollTopBtn" title="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+
+  <!-- ✅ Our JavaScript file (animations, navbar, typing effect) -->
+  <script src="script.js"></script>
+
+</body>
+</html>
