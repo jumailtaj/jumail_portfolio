@@ -14,24 +14,24 @@
 ---------------------------------------------------------------- */
 :root {
   /* Colors */
-  --bg-dark:       #0a0f1e;      /* Main dark background */
-  --bg-card:       #111827;      /* Card background */
-  --bg-card-hover: #1a2235;      /* Card background on hover */
-  --border:        #1e2d45;      /* Subtle border color */
-  --accent:        #00d4aa;      /* Teal/cyan accent color */
-  --accent-glow:   rgba(0, 212, 170, 0.15); /* Glow effect color */
-  --accent-2:      #3b82f6;      /* Secondary blue accent */
-  --text-primary:  #f1f5f9;      /* Main text (almost white) */
-  --text-muted:    #64748b;      /* Muted/subtitle text */
-  --text-light:    #94a3b8;      /* Light gray text */
+  --bg-dark:       #0F172A;      /* Main dark background */
+  --bg-card:       #1E293B;      /* Card background */
+  --bg-card-hover: #212F45;      /* Card background on hover */
+  --border:        #334155;      /* Subtle border color */
+  --accent:        #3B82F6;      /* Sharp electric blue */
+  --accent-glow:   rgba(59, 130, 246, 0.15); /* Glow effect color */
+  --accent-2:      #6366F1;      /* Secondary indigo */
+  --text-primary:  #FFFFFF;      /* Main text (Crisp white) */
+  --text-muted:    #94A3B8;      /* Muted/subtitle text */
+  --text-light:    #94A3B8;      /* Light gray text */
 
   /* Typography */
   --font-heading: 'Sora', sans-serif;
   --font-body:    'DM Sans', sans-serif;
 
   /* Sizes & Spacing */
-  --radius:     12px;        /* Rounded corner size */
-  --radius-lg:  20px;
+  --radius:     4px;         /* Rounded corner size (sharp) */
+  --radius-lg:  6px;         /* Max 6px */
   --shadow:     0 4px 24px rgba(0, 0, 0, 0.4);
   --shadow-lg:  0 8px 40px rgba(0, 0, 0, 0.5);
   --transition: 0.3s ease;   /* Smooth animation speed */
@@ -267,9 +267,9 @@ img {
 .profile-img {
   width: 130px;
   height: 130px;
-  border-radius: 50%;
-  border: 4px solid var(--accent);
-  box-shadow: 0 0 0 8px var(--accent-glow), var(--shadow);
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
 }
 /* Small green "online" dot */
 .online-dot {
@@ -350,7 +350,7 @@ img {
   background: var(--bg-card);
   border: 1px solid var(--border);
   padding: 0.35rem 0.85rem;
-  border-radius: 100px;
+  border-radius: var(--radius);
   font-size: 0.8rem;
   color: var(--text-light);
 }
@@ -378,7 +378,7 @@ img {
   align-items: center;
   gap: 0.5rem;
   padding: 0.8rem 2rem;
-  border-radius: 100px;       /* Pill shape */
+  border-radius: var(--radius);       /* Sharp */
   font-weight: 600;
   font-size: 0.95rem;
   font-family: var(--font-body);
@@ -413,7 +413,7 @@ img {
 .btn-sm {
   padding: 0.5rem 1.25rem;
   font-size: 0.8rem;
-  border-radius: 100px;
+  border-radius: var(--radius);
   background: transparent;
   border: 1px solid var(--accent);
   color: var(--accent);
@@ -639,7 +639,7 @@ img {
   color: #93c5fd;
   font-size: 0.75rem;
   padding: 0.25rem 0.65rem;
-  border-radius: 100px;
+  border-radius: var(--radius);
   font-weight: 500;
 }
 
@@ -720,7 +720,7 @@ img {
 .ml-tag {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 100px;
+  border-radius: var(--radius);
   padding: 0.4rem 1rem;
   font-size: 0.85rem;
   color: var(--text-light);
@@ -798,7 +798,7 @@ img {
   align-items: center;
   gap: 0.6rem;
   padding: 0.75rem 1.5rem;
-  border-radius: 100px;
+  border-radius: var(--radius);
   background: var(--bg-card);
   border: 1px solid var(--border);
   color: var(--text-light);
